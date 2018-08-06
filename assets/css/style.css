@@ -469,3 +469,12 @@ ol {
 .txt-none {
     text-decoration: none;
 }
+
+/* Extra small devices (phones, 640px and down) */
+@media only screen and (max-width: 640px) {...} 
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {...} 
+
+/* Large devices (laptops/desktops, 980px and down) */
+@media only screen and (max-width: 980px) {...} 
