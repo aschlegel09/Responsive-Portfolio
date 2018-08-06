@@ -477,4 +477,9 @@ ol {
 @media only screen and (max-width: 768px) {...} 
 
 /* Large devices (laptops/desktops, 980px and down) */
-@media only screen and (max-width: 980px) {...} 
+@media only screen and (max-width: 980px) {
+    .text-block {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
