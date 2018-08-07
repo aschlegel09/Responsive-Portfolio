@@ -1,15 +1,7 @@
-#bg-color {
-    /* background-color: ; */
-    background-image: "assets/images/eagles-dogs.PNG";
-}
-
-.bg-img {
-    background-image: "assets/images/eagles-dogs.PNG";
-}
-
-html, body {
+body {
     max-width: 100%;
     overflow-x: hidden;
+	background-image: url(assets/images/paper_fibers.png);
 }
 
 #head-div {
@@ -28,11 +20,12 @@ html, body {
     position: relative;
     width: 178px;
     height: 44px;
-    margin-left: 196px;
+    margin-left: 480px;
     padding-top: 20px;
     font-size: 21px;
     font-weight: bold;
     overflow: hidden;
+	z-index: 1;
 }
 
 li a {
@@ -46,6 +39,18 @@ li a:hover {
     background-color: #4aaaa5;
     color: white;
     transition-duration: .5s;
+}
+
+li a:focus {
+    background-color: #4aaaa5;
+	color: white;
+}
+
+nav li a {
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+	box-sizing:border-box;
+/*	Prevents collapsing^^^ */
 }
 
 .active {
@@ -62,8 +67,7 @@ li a:hover {
     top: 0;
     right: 0;
     position: absolute;
-    /* float: right; */
-    margin-right: 200px;
+    margin-right: 470px;
     background-color: white;
     list-style-type: none;
 }
@@ -74,30 +78,6 @@ li a:hover {
     padding: 10px 10px 20px 10px;
     font-size: 14px;
 }
-
-/* .full-width {
-    top: 0;
-    position: static;
-    height: 100px;
-    width: 100vw;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-left: -50px;
-    padding-left: 260px;
-    background-color: lightgray;
-}  */
-/* 
-.container {
-    top: 0;
-    position: absolute;
-    height: 100px;
-    width: 960px;
-    padding-bottom: 10px;
-    padding-left: 260px;
-    margin: 0 auto;
-    background-color: white;
-} */
-
 
 #container {
     width: 960px;
@@ -134,26 +114,23 @@ li a:hover {
 }
 
 .footer-div {
-    position: static;
+    position: absolute;
     overflow: hidden;
     left: 0;
+	bottom: 0;
     background-color: #666666;
     width: 100vw;
-    /* border-top: #666666 solid 30px; */
 }
-/* 
-.footer-div p {
-    bottom: 0;
-    vertical-align: bottom;
-} */
 
 .footer-div:before {
     content: "";
+	left: 0;
+	bottom: 0;
     position: absolute;
     overflow: hidden;
-    margin-bottom: 50px;
-    width: 100vw;
-    border: 5px solid #4aaaa5;
+    width: 100%;
+	margin-bottom: 52px;
+    border-top: 10px solid #4aaaa5;
   }
 
 .fl-rt {
@@ -220,10 +197,14 @@ li a:hover {
     overflow: auto;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
+.clearfix:before,
+.clearfix:after {
+    content: " ";
     display: table;
+}
+
+.clearfix:after {
+    clear: both;
 }
 
 .port-image {
@@ -313,7 +294,7 @@ li a:hover {
 }
 
 .form-width {
-    width: 420x;
+    width: 420px;
 }
 
 .message-ht {
@@ -333,7 +314,6 @@ li a:hover {
     width: 200px; /* for IE 6 */
     clear: both;
     float: left;
-    /* display: block; */
     margin-left: 2px;
     margin-right: auto;
     margin-bottom: 25px;
@@ -345,7 +325,6 @@ li a:hover {
     width: 200px; /* for IE 6 */
     clear: both;
     float: right;
-    /* display: block; */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
@@ -365,7 +344,6 @@ img {
  h2 span { 
     color: #ffffff; 
     letter-spacing: -1px;  
-    background: #4aaaa5; /* fallback color */
     background: #4aaaa5;
     padding: 10px; 
  }
@@ -400,10 +378,6 @@ ol {
 .btn-pad {
     padding: 10px 10px 10px 10px;
 }
-/* 
-.btn-margin {
-    margin: 0px 500px 0px 0px;
-} */
 
 .submit-pad {
     padding: 8px 25px 8px 25px;
@@ -470,16 +444,130 @@ ol {
     text-decoration: none;
 }
 
-/* Extra small devices (phones, 640px and down) */
-@media only screen and (max-width: 640px) {...} 
+@media only screen and (min-width: 640px) {
+	#head-div{
+		width: 100vw;
+	}
+}
 
-/* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 768px) {...} 
+/* Extra small deviceclearfixs (phones, 640px and down) */
+@media only screen and (max-width: 640px) {
+	p {
+		font-size: 2vw;
+	}
+	.text-block {
+        margin-right: none;
+        margin-left: none;
+    }
+	.text-block-2 {
+        margin-right: none;
+        margin-left: none;
+    }
+	.navbar {
+		margin-right: auto;
+		width: auto;
+	}
+	.name {
+		margin-left: 0;
+		width: 190px;
+	}
+	#container-3 {
+		width: 40vw;
+/*		height: auto;*/
+	}
+	#container-2 {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#container {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#head-div {
+		width: 100vw;
+	}
+		.port-image2 {
+		position: static;
+			margin-left: auto;
+	}
+} 
+
+/* Medium devices (landscape tablets, between 640px and 768px) */
+@media (min-width: 640px) and (max-width: 768px) {
+ 	p {
+		font-size: 2vw;
+	}
+	.text-block {
+        margin-right: none;
+        margin-left: none;
+    }
+	.text-block-2 {
+        margin-right: none;
+        margin-left: none;
+    }
+	#container-3 {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#container-2 {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#container {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#head-div {
+		width: 100vw;
+	}
+	.navbar {
+		margin-right: auto;
+		width: auto;
+	}
+	.name {
+		margin-left: 0;
+		width: 200px;
+	}
+		.port-image2 {
+		position: relative;
+	}
+} 
 
 /* Large devices (laptops/desktops, 980px and down) */
 @media only screen and (max-width: 980px) {
-    .text-block {
+   	#container {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#container-2 {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#container-3 {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	.text-block {
         margin-right: auto;
         margin-left: auto;
     }
+	.text-block-2 {
+        margin-right: auto;
+        margin-left: auto;
+    }
+	#head-div {
+		width: 100vw;
+	}
+	.navbar {
+		margin-right: auto;
+		width: auto;
+	}
+	.name {
+		margin-left: 0;
+	}
+	.port-image2 {
+		position: relative;
+		margin-left: 540px;
+	}
 }
+
