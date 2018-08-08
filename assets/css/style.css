@@ -444,16 +444,10 @@ ol {
     text-decoration: none;
 }
 
-@media only screen and (min-width: 640px) {
-	#head-div{
-		width: 100vw;
-	}
-}
-
 /* Extra small deviceclearfixs (phones, 640px and down) */
 @media only screen and (max-width: 640px) {
 	p {
-		font-size: 2vw;
+		font-size: 12px;
 	}
 	.text-block {
         margin-right: none;
@@ -464,32 +458,52 @@ ol {
         margin-left: none;
     }
 	.navbar {
-		margin-right: auto;
-		width: auto;
+		display: inline;
+	}
+	.hnav {
+		margin: auto;
+		width: 50px;
 	}
 	.name {
-		margin-left: 0;
-		width: 190px;
+		margin-left: 0px;
+		left: 0;
+		width: 33vw;
 	}
 	#container-3 {
-		width: 40vw;
+		width: 100vw;
 /*		height: auto;*/
 	}
 	#container-2 {
-		width: 80vw;
+		width: 100vw;
 /*		height: auto;*/
 	}
 	#container {
-		width: 80vw;
+		width: 100vw;
 /*		height: auto;*/
 	}
 	#head-div {
 		width: 100vw;
+/*		position: static;*/
 	}
-		.port-image2 {
-		position: static;
-			margin-left: auto;
+	.port-image2 {
+		margin-left: auto;
+		width: 33.3%;
+		min-height: 100px;
+		max-height: 150px;
 	}
+	.port-image1 {
+		display: block;
+		margin-left: auto;
+		width: 33.3%;
+		min-height: 100px;
+		max-height: 150px;
+	}
+/*
+	img {
+		position: absolute;
+		width: 50vw;
+	}
+*/
 } 
 
 /* Medium devices (landscape tablets, between 640px and 768px) */
@@ -498,7 +512,7 @@ ol {
 		font-size: 2vw;
 	}
 	.text-block {
-        margin-right: none;
+        margin-right: auto;
         margin-left: none;
     }
 	.text-block-2 {
@@ -528,8 +542,18 @@ ol {
 		margin-left: 0;
 		width: 200px;
 	}
-		.port-image2 {
-		position: relative;
+	.port-image2 {
+		position: absolute;
+		width: 33.3%;
+		min-height: 100px;
+		max-height: 150px;
+	}
+	.port-image1 {
+		position: absolute;
+		width: 33.3%;
+		min-height: 100px;
+		max-height: 150px;
+		margin-left: ;
 	}
 } 
 
@@ -563,7 +587,7 @@ ol {
 		width: auto;
 	}
 	.name {
-		margin-left: 0;
+		margin-left: 80px;
 	}
 	.port-image2 {
 		position: relative;
@@ -571,3 +595,39 @@ ol {
 	}
 }
 
+@media only screen and (min-width: 980px) {
+   	#container {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#container-2 {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	#container-3 {
+		width: 80vw;
+/*		height: auto;*/
+	}
+	.text-block {
+        margin-right: auto;
+        margin-left: auto;
+    }
+	.text-block-2 {
+        margin-right: auto;
+        margin-left: auto;
+    }
+	#head-div {
+		width: 100vw;
+	}
+	.navbar {
+		margin-right: auto;
+		width: auto;
+	}
+	.name {
+		margin-left: 100px;
+	}
+	.port-image2 {
+		position: relative;
+		margin-left: 540px;
+	}
+}
