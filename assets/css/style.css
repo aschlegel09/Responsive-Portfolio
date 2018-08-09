@@ -1,7 +1,6 @@
 body {
     max-width: 100%;
     overflow-x: hidden;
-	background-image: url(assets/images/paper_fibers.png);
 }
 
 #head-div {
@@ -114,7 +113,7 @@ nav li a {
 }
 
 .footer-div {
-    position: absolute;
+    position: static;
     overflow: hidden;
     left: 0;
 	bottom: 0;
@@ -122,15 +121,19 @@ nav li a {
     width: 100vw;
 }
 
-.footer-div:before {
-    content: "";
-	left: 0;
-	bottom: 0;
-    position: absolute;
+.footer-div2 {
+    position: static;
     overflow: hidden;
+    left: 0;
+	bottom: 0;
+	height: 10px;
+    background-color: #4aaaa5;
+    width: 100vw;
+	content: "";
+/*
     width: 100%;
-	margin-bottom: 52px;
     border-top: 10px solid #4aaaa5;
+*/
   }
 
 .fl-rt {
@@ -488,15 +491,13 @@ ol {
 	.port-image2 {
 		margin-left: auto;
 		width: 33.3%;
-		min-height: 100px;
-		max-height: 150px;
+
 	}
 	.port-image1 {
 		display: block;
 		margin-left: auto;
 		width: 33.3%;
-		min-height: 100px;
-		max-height: 150px;
+
 	}
 /*
 	img {
@@ -533,9 +534,10 @@ ol {
 	}
 	#head-div {
 		width: 100vw;
+		position: static;
 	}
 	.navbar {
-		margin-right: auto;
+		margin-right: 10%;
 		width: auto;
 	}
 	.name {
@@ -543,70 +545,87 @@ ol {
 		width: 200px;
 	}
 	.port-image2 {
-		position: absolute;
-		width: 33.3%;
-		min-height: 100px;
-		max-height: 150px;
+		
 	}
+	
 	.port-image1 {
-		position: absolute;
-		width: 33.3%;
-		min-height: 100px;
-		max-height: 150px;
-		margin-left: ;
+	
+		
 	}
+/*
+	.footer-div {
+		position: inherit;
+	}
+*/
 } 
 
 /* Large devices (laptops/desktops, 980px and down) */
 @media only screen and (max-width: 980px) {
    	#container {
 		width: 80vw;
-/*		height: auto;*/
+		height: auto;
 	}
 	#container-2 {
 		width: 80vw;
-/*		height: auto;*/
+		height: auto;
 	}
 	#container-3 {
 		width: 80vw;
-/*		height: auto;*/
+		height: auto;
 	}
 	.text-block {
-        margin-right: auto;
-        margin-left: auto;
+
     }
+	
 	.text-block-2 {
-        margin-right: auto;
-        margin-left: auto;
+		margin-left: 40px;
+		margin-bottom: 10px;
+		margin-top: -330px;
+
     }
 	#head-div {
 		width: 100vw;
 	}
 	.navbar {
-		margin-right: auto;
+		margin-right: 10%;
 		width: auto;
 	}
 	.name {
 		margin-left: 80px;
 	}
 	.port-image2 {
-		position: relative;
-		margin-left: 540px;
+		position: static;
+		margin-left: 0px;
+		float: none;
+		right: 20%;	
 	}
+
+/*
+	.footer-div {
+		bottom: 0;
+		position: static;
+	}
+	.footer-div2 {
+		position: static;
+	}
+*/
 }
 
 @media only screen and (min-width: 980px) {
-   	#container {
+	.footer-div {
+		position: static;
+	}   
+/*	#container {
 		width: 80vw;
-/*		height: auto;*/
+		height: auto;
 	}
 	#container-2 {
 		width: 80vw;
-/*		height: auto;*/
+		height: auto;
 	}
 	#container-3 {
 		width: 80vw;
-/*		height: auto;*/
+		height: auto;
 	}
 	.text-block {
         margin-right: auto;
@@ -618,16 +637,22 @@ ol {
     }
 	#head-div {
 		width: 100vw;
-	}
+	}*/
 	.navbar {
-		margin-right: auto;
+		margin-right: 10%;
 		width: auto;
 	}
+
 	.name {
-		margin-left: 100px;
+		margin-left: 10%;
 	}
+
+	/*
+	
 	.port-image2 {
 		position: relative;
 		margin-left: 540px;
 	}
+}
+*/
 }
